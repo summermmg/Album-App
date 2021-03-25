@@ -5,16 +5,15 @@ import {LinkContainer} from 'react-router-bootstrap'
 const Header = () => {
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" className="px-4">
 
-          <LinkContainer className="mr-5" to="/">
-            <Navbar.Brand><i className="fas fa-camera"></i> Album</Navbar.Brand>
-          </LinkContainer>
+        <LinkContainer className="mr-5" to="/">
+          <Navbar.Brand><i className="fas fa-camera"></i> Album</Navbar.Brand>
+        </LinkContainer>
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-
               <LinkContainer to="/" className="mr-5">
                 <Nav.Link>Home</Nav.Link>
               </LinkContainer>
@@ -31,9 +30,8 @@ const Header = () => {
                 <Nav.Link><i className="fas fa-plus"></i> Add New Image</Nav.Link>
               </LinkContainer>  
             </Nav>
-        </Navbar.Collapse>
+          </Navbar.Collapse>
       </Navbar>
-
     )
 }
 

@@ -4,7 +4,6 @@ import ImageItem from '../components/ImageItem'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 
-
 import {fetchSamples} from '../actions'
 import { Row, Col } from 'react-bootstrap'
 
@@ -37,14 +36,15 @@ const SampleAlbumScreen = () => {
 
 
     return (
-        <div className="px-5">
-            <h3 className="my-4">Album Page</h3>
-            <Row className="align-items-center" data-toggle="modal" data-target="#exampleModal">
-            {content}
-            </Row>
+        <div className="section">
+            <div className="container">
+                <h2 className="my-5">Sample Album</h2>
+                <Row className="align-items-center" data-toggle="modal" data-target="#exampleModal">
+                    {content}
+                </Row>
+            </div>
         </div>
     )
-
 }
 
 export default SampleAlbumScreen

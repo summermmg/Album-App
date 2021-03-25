@@ -1,6 +1,5 @@
 import React, {Fragment, useState} from 'react'
 import {useSelector,useDispatch} from 'react-redux'
-
 import {fileUpload} from '../actions'
 import Message from '../components/Message'
 import ProgressBar from '../components/ProgressBar'
@@ -47,36 +46,35 @@ const FileUploadScreen = () => {
         <Fragment>
             <div className="jumbotron text-center mx-auto mt-5" style={{width: "40%"}}>
                 <form onSubmit={onSubmit} className="mb-3">
-                <div className="form-group">
-                    <div className='custom-file mb-4' >
-                        <input
-                            type='file'
-                            className='custom-file-input'
-                            id='customFile'
-                            onChange={onChange}
-                        />
-                        <label className='custom-file-label' htmlFor='customFile'>
-                            {filename}
-                        </label>
+                    <div className="form-group">
+                        <div className='custom-file mb-4' >
+                            <input
+                                type='file'
+                                className='custom-file-input'
+                                id='customFile'
+                                onChange={onChange}
+                            />
+                            <label className='custom-file-label' htmlFor='customFile'>
+                                {filename}
+                            </label>
+                        </div>
                     </div>
-                </div>
 
-                <div className="form-group">
-                    <label for="exampleTextarea">Image Description</label>
-                    <textarea value={textarea} onChange={(e) => {setTextarea(e.target.value)}} className="form-control" id="image-textarea" rows="3"></textarea>
-                </div>
-                <div className="form-group">
-                    <input
-                        type='submit'
-                        value='Upload'
-                        className='btn btn-primary mt-4'
-                    />
-                </div>
+                    <div className="form-group">
+                        <label for="exampleTextarea">Image Description</label>
+                        <textarea value={textarea} onChange={(e) => {setTextarea(e.target.value)}} className="form-control" id="image-textarea" rows="3"></textarea>
+                    </div>
+                    <div className="form-group">
+                        <input
+                            type='submit'
+                            value='Upload'
+                            className='btn btn-primary mt-4'
+                        />
+                    </div>
                 </form>
 
                 {loadedPercentage ? <ProgressBar loadedPercentage = {loadedPercentage} /> : null} 
                 
-
                 {error ? <Message variant="warning">{error}</Message> : null}
 
                 {/* {loading && loadedPercentage ? <h1>{loadedPercentage}</h1> : null} */}

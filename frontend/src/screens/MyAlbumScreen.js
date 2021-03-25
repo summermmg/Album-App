@@ -3,6 +3,7 @@ import {useSelector,useDispatch} from 'react-redux'
 import ImageItem from '../components/ImageItem'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import {Link} from 'react-router-dom'
 
 import {fetchUploads} from '../actions'
 import { Row, Col } from 'react-bootstrap'
@@ -40,14 +41,18 @@ const MyAlbumScreen = () => {
     }
 
     return (
-        <div className="px-5">
-            <h3 className="my-4">My Album</h3>
-            <Row className="align-items-center">
-            {content}
-            </Row>
+        <div className="section">
+            <div className="container">
+                <h2 className="my-5">My Album</h2>
+                {uploads.length===0 && (
+                    <Message variant="info">There is no image in this album. <Link to="/fileupload">Upload one.</Link></Message>
+                )}
+                <Row className="align-items-center">
+                    {content}
+                </Row>
+            </div>
         </div>
     )
-
 }
 
 export default MyAlbumScreen

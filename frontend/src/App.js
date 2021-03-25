@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen'
 import FileUploadScreen from './screens/FileUploadScreen'
 import MyAlbumScreen from './screens/MyAlbumScreen'
 import SampleAlbumScreen from './screens/SampleAlbumScreen'
+import './App.css'
 
 
 
