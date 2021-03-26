@@ -7,8 +7,9 @@ const bodyParser = require('body-parser')
 const app = express();
 const port = process.env.PORT || 5000;
 const data = require('./data.js');
+const path = require('path');
 
-
+app.use(express.static(path.join(__dirname,'frontend/build')))
 app.use(fileUpload());
 
 app.use(bodyParser.json({limit: '50mb'}));
