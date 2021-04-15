@@ -15,11 +15,12 @@ A web application that allows users to upload photos and create a custom photo a
 ## Features
 * Upload photo to personal album
  
- <img src="/frontend/public/assets/addImage.gif" width="50%" />
+  <img src="/frontend/public/assets/addImage.gif" width="50%" />
 
 * Display photos
  
 * Delete photo from personal album  
+ 
   <img src="/frontend/public/assets/deleteImage.gif" width="50%" />
 
 
