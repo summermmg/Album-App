@@ -47,12 +47,14 @@ const FileUploadScreen = () => {
             <div className="jumbotron text-center mx-auto mt-5" style={{width: "40%"}}>
                 <form onSubmit={onSubmit} className="mb-3">
                     <div className="form-group">
-                        <div className='custom-file mb-4' >
+                                           
+                        <div className='custom-file mb-4' >                            
                             <input
                                 type='file'
                                 className='custom-file-input'
                                 id='customFile'
                                 onChange={onChange}
+                                disabled
                             />
                             <label className='custom-file-label' htmlFor='customFile'>
                                 {filename}
@@ -64,11 +66,13 @@ const FileUploadScreen = () => {
                         <label for="exampleTextarea">Image Description</label>
                         <textarea value={textarea} onChange={(e) => {setTextarea(e.target.value)}} className="form-control" id="image-textarea" rows="3"></textarea>
                     </div>
+                    <Message variant="info">{"Add Image button is disabled for live demo."}</Message> 
                     <div className="form-group">
                         <input
                             type='submit'
                             value='Upload'
                             className='btn btn-primary mt-4'
+                            disabled
                         />
                     </div>
                 </form>
