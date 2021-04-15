@@ -8,7 +8,7 @@
   - [Setup](#setup)
 
 ## General info
-[View Live Demo](https://album-app-demo.herokuapp.com/) 
+[View Live Demo](https://album-app-demo.herokuapp.com/)  
 A web application that allows users to upload photos and create a custom photo album.
 <div align="center"><img src="/frontend/public/assets/screenshot.png" width="70%"  /></div>
 
