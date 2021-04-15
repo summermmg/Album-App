@@ -9,6 +9,7 @@ const port = process.env.PORT || 5000;
 const data = require('./data.js');
 const path = require('path');
 
+//create a static server for client side
 app.use(express.static(path.join(__dirname,'frontend/build')))
 app.use(fileUpload());
 
@@ -69,13 +70,13 @@ app.get('/api/uploads', (req,res) => {
 //Delelete Image
 app.delete('/api/uploads/:id', (req,res) => {
   const found = data.uploads.find(upload => upload.id === req.params.id)
-  const index = data.uploads.indexOf(found)
-
-  data.uploads.splice(index,1)
   
   if (found) {
     try {
       fs.unlinkSync(`${__dirname}/frontend/public${found.img}`)
+
+      const index = data.uploads.indexOf(found)
+      data.uploads.splice(index,1)
 
       res.json({
         msg: `Image with ID: ${req.params.id} deleted`,
