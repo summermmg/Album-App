@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './components/Header'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {HashRouter as Router, Route} from 'react-router-dom'
 import HomeScreen from './screens/HomeScreen'
 import FileUploadScreen from './screens/FileUploadScreen'
 import MyAlbumScreen from './screens/MyAlbumScreen'
